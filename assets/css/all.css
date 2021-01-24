@@ -1,0 +1,519 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+}
+
+.background__Ping .actualBlock__sliders__slide{
+  background: #FDD5DF;
+}
+section{
+  max-width: 1600px;
+  margin: auto;
+}
+.buttonRequest_S:hover{
+  transition: 0.2s;
+}
+.buttonRequest_S:hover{
+  opacity: 0.6;
+  cursor: pointer;
+}
+  .tittleTextS{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 49px;
+    display: flex;
+    align-items: center;
+    color: #002E42;
+    text-decoration: none;
+    padding-top: 139px;
+    margin-bottom: 45px;
+  }
+  .descriptionTextS{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  }
+  .helpersTextS{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 37px;
+  color: #002E42;
+  margin: 0;
+  padding-bottom: 25px;
+  }
+
+
+  .flexBoxS{
+    display: flex
+  }
+
+
+  .flexBoxS .s_1:last-child{
+    margin-left: 392px;
+}
+
+  
+
+/* style Form Request */
+.flexForm{
+  display: flex;
+  border-radius: 5px;
+  height: 714px;
+}
+.flexForm form{
+  margin-left: 94px;
+  margin-right: 94px;
+  margin-top: 84px;
+}
+.flexForm .roundS{
+  width: 302px;
+  height: 302px;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 87px;
+  background: rgba(255, 255, 255, 0.4);
+  border: 3px solid #FFFFFF;
+  margin-bottom: 59px
+}
+.flexForm .leftForm{
+  background: #A5D9F2;
+  width: 420px;
+}
+.flexForm .rightForm{
+  background-color: #fff;
+  width: 1180px;
+}
+.flexForm .rightForm .itemInpustS:last-child{
+  width: 100%;
+  margin-right: 0px;
+}
+.flexForm .rightForm textarea{
+  width: 100% !important;
+  border: none;
+  border-bottom: 1px solid #000000;
+  min-width: 100%;
+  min-height: 100px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: rgba(0, 0, 0, 0.47);
+  max-width: 100%;
+  max-height: 150px;
+}
+
+
+
+.itemInpustS input::-webkit-outer-spin-button,
+.itemInpustS input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.itemInpustS input::-webkit-datetime-edit, 
+.itemInpustS input::-webkit-datetime-edit-fields-wrapper,
+.itemInpustS input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+.itemInpustS input[type='number'] {
+  -moz-appearance: textfield;
+}
+.itemInpustS input {outline:none;}
+
+.itemInpustS textarea::-webkit-outer-spin-button,
+.itemInpustS textarea::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.itemInpustS textarea::-webkit-datetime-edit, 
+.itemInpustS textarea::-webkit-datetime-edit-fields-wrapper,
+.itemInpustS textarea::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+.itemInpustS textarea[type='number'] {
+  -moz-appearance: textfield;
+}
+.itemInpustS textarea {outline:none;}
+
+
+.flexForm .rightForm textarea::-webkit-scrollbar {
+  width: 5px;
+  height: 31px;
+  cursor: pointer;
+}
+.flexForm .rightForm textarea::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+  cursor: pointer;
+}
+.flexForm .rightForm textarea::-webkit-scrollbar-thumb {
+  background: #002E42;
+  border: 0px none #ffffff;
+  cursor: pointer;
+}
+
+
+.flexForm .rightForm textarea::-webkit-scrollbar-thumb:hover {
+  background:#014a69;
+  cursor: pointer;
+}
+.flexForm .rightForm textarea::-webkit-scrollbar-thumb:active {
+  background :#014a69;
+  cursor: pointer;
+}
+.flexForm .rightForm textarea::-webkit-scrollbar-track {
+  background: transparent;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.flexForm .rightForm textarea::-webkit-scrollbar-track:hover {
+  background: transparent;
+}
+.flexForm .rightForm textarea::-webkit-scrollbar-track:active {
+  background: transparent;
+}
+.flexForm .rightForm textarea::-webkit-scrollbar-corner {
+  background: transparent;
+}
+.roundS:after {
+  content: "Фото";
+  margin-top: 150px;
+  display: block;
+  line-height: 0;
+  margin-left: 131px;
+  color: rgba(0, 46, 66, 0.7);
+}
+.flexForm .addImageS{
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 21px;
+text-align: center;
+color: #002E42;
+}
+
+
+
+
+.itemInpustS textarea::-webkit-outer-spin-button,
+.itemInpustS textarea::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.itemInpustS textarea::-webkit-datetime-edit, 
+.itemInpustS textarea::-webkit-datetime-edit-fields-wrapper,
+.itemInpustS textarea::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+.itemInpustS textarea[type='number'] {
+  -moz-appearance: textfield;
+}
+.itemInpustS textarea {outline:none;}
+.actualBlock__sliders__slide p  {
+  margin: 0 40px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.actualBlock__sliders__slide {
+  /*height: 21vh;*/
+  height: 194px;
+  width: 24vw;
+  max-width: 384px;
+  min-width: 346px;
+  margin-right: 13px;
+  background: #B4E8FF;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.actualBlock__sliders__slide p:after {
+  content: url('../images/mainPage/curs.svg');
+  position: absolute;
+  bottom: 74px;
+}
+
+
+
+
+/* скролл бар */
+.actualBlock__sliders {
+  display: flex;
+  overflow-x: scroll;
+  padding-bottom: 27px;
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+
+}
+.actualBlock__sliders::-webkit-scrollbar {
+  width: 12px;
+}
+.actualBlock__sliders::-webkit-scrollbar-button {
+  width: 2px;
+  height: 2px;
+  cursor: pointer;
+}
+.actualBlock__sliders::-webkit-scrollbar-thumb {
+  /*height: 6px;*/
+  border: 3px solid transparent;
+  background: #002E42;
+  /*border-radius: 9px;*/
+  background-clip: content-box;
+  /*border: 1px solid #E4003A;*/
+}
+
+
+.actualBlock__sliders::-webkit-scrollbar-track {
+  background: rgba(0, 46, 66, 0.5);
+  border: 7px solid transparent;
+  background-clip: content-box;
+}
+
+/*  */
+.flexBaseS::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+  cursor: pointer;
+}
+.flexBaseS::-webkit-scrollbar-thumb {
+  background: #002E42;
+  border: 0px none #ffffff;
+  cursor: pointer;
+}
+
+
+.flexBaseS::-webkit-scrollbar-thumb:hover {
+  background:#014a69;
+  cursor: pointer;
+}
+.flexBaseS::-webkit-scrollbar-thumb:active {
+  background :#014a69;
+  cursor: pointer;
+}
+.flexBaseS::-webkit-scrollbar-track {
+  background: transparent;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.flexBaseSSECtion{
+  position: relative;
+}
+
+
+
+
+.castomScrolLine:before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: -2px;
+  height: 91px;
+  background: rgba(0, 46, 66, 0.5);
+  width: 2px;
+  margin-top: 49px;
+}
+
+.formFlexInputs{
+  display: flex;
+  width: max-content;
+  margin: auto;
+  min-width: 576px;
+  position: relative;
+}
+.formFlexInputs .itemInpustS:first-child{
+  margin-right: 62px;
+}
+
+
+
+.itemInpustS{
+  width: 257px;
+}
+.itemInpustS{
+  margin-top: 28px;
+}
+.itemInpustS p {
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 21px;
+color: #002E42;
+margin-bottom: 9px;
+}
+.itemInpustS input{
+  border: none;
+  border-bottom: 1px solid #000000;
+  color: rgba(0, 0, 0, 0.47);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  background: #ff000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media */ 
+
+@media (max-width: 1600px){
+  section {
+    padding: 0px 30px 0px 30px !important;
+}
+.flexBoxS .s_1:last-child{
+  margin-left: auto !important
+}
+#footer {
+  padding: 0px 30px 0px 30px !important;
+}
+}
+
+
+@media (max-width: 1150px){
+.flexForm {
+  display: block !important;
+  height: auto !important;
+}
+.flexForm form {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-top: 0 !important;
+  padding-bottom: 50px;
+}
+.flexForm .rightForm {
+  width: 100% !important;
+}
+.flexForm .leftForm {
+  width: 100% !important;
+  padding-top: 3px !important;
+  padding-bottom: 80px;
+}
+.flexForm .addImageS {
+  margin-bottom: 0 !important;
+}
+#footer{
+  columns: 250px 3 !important;
+  column-gap: 40px !important;
+  display: block  !important;
+}
+.itemFooter {
+  width: 150px;
+}
+.itemFooter {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+}
+
+@media (max-width: 850px){
+  .flexBoxS {
+    display: block !important;
+}
+.s_1 {
+  width: 366px !important;
+}
+
+.flexBoxS .s_1:last-child{
+  padding-top: 30px;
+}
+
+
+}
+@media (max-width: 690px){
+  .formFlexInputs{
+    display: block !important;
+    width: 223px !important;
+    max-width: 200px !important;
+    min-width: 258px !important;
+
+  }
+  .tittleTextS {
+    font-size: 28px;
+    line-height: 1;
+    padding-top: 50px;
+    
+}
+
+.slider__dots {
+  left: -134px !important;
+}
+.flexForm form {
+  padding-bottom: 50px;
+  margin-top: -27px !important;
+  padding-top: 30px;
+}
+.tittleTextS{
+  font-size: 24px;
+}
+.helpersTextS{
+  font-size: 24px;
+  line-height: 1;
+}
+.flexBaseS .itemBaseS{
+  font-size: 24px !important;
+}
+.s_1 {
+  width: 318px !important;
+}
+}
+
+
+@media (max-width: 400px){
+  section {
+    padding: 0px 15px 0px 15px !important;
+}
+  .roundS:after {
+    content: "Фото";
+    margin-top: 102px;
+    display: block;
+    line-height: 0;
+    margin-left: 77px;
+    color: rgba(0, 46, 66, 0.7);
+}
+.flexForm .roundS {
+  width: 200px;
+  height: 200px;
+}
+}
+
