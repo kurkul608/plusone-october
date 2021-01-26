@@ -96,7 +96,7 @@
 }
 .backGroundImage1 {
     background-size: cover;
-    background-image: url("../../images/mainPage/slider/1.png");
+    /*background-image: url("../../images/mainPage/slider/1.png");*/
 }
 .backGroundImage2 {
     background-size: cover;

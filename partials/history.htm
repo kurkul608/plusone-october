@@ -1,0 +1,33 @@
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "istoriya"
+postsPerPage = 25
+noPostsMessage = "Записей не найдено"
+sortOrder = "published_at desc"
+categoryPage = "storyPage"
+postPage = "history"
+==
+{% set posts = blogPosts.posts %}
+
+    <div class="sliderBlock__slider" id="style-2">
+{% for post in posts %}
+        <a href="{{post.url}}" class="sliderBlock__slider__slide">
+            {% for image in post.featured_images|slice(0,1) %}
+            <div class="sliderBlock__slider__slide__image backGroundImage1" style='background-image: url({{ image.path }});'   alt="{{post.title}}"           >
+<!--            <div>123</div>-->
+
+    </div>
+<!--            <img class="sliderBlock__slider__slide__image" src="{{ image.path }}" alt="{{post.title}}">-->
+
+            {% endfor %}
+            <div class="sliderBlock__slider__slide__name">{{post.title}}</div>
+            <div class="sliderBlock__slider__slide__age">20 лет</div>
+            <div class="sliderBlock__slider__slide__city">Москва</div>
+            <div class="sliderBlock__slider__slide__text">
+                {{post.excerpt}}
+            </div>
+        </a>
+        {% endfor %}
+
+        
+    </div>

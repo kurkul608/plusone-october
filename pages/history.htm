@@ -1,7 +1,11 @@
 title = "История"
-url = "/history"
+url = "/history/:slug"
 layout = "default"
+is_hidden = 0
 
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "history"
 ==
 
 {% put styles %}
@@ -10,6 +14,8 @@ layout = "default"
 <link rel="stylesheet" href="{{ 'assets/css/components/ComponentScrollPeople.css'|theme }}">
 
 {% endput %}
+
+
 
 <div class="wrapperSectionHistory__One  debPb__93">
     <section class="topContent">
@@ -20,8 +26,12 @@ layout = "default"
             <div class="wrapperHistoryFles">
                 <div class="itemHiscory">
                     <div class="ComponentHiscory_1">
-                        <div class="sliderBlock__slider__slide__image backGroundImage1"></div>
-                        <div class="pt_27 sliderBlock__slider__slide__name">Маша</div>
+                        {% for image in post.featured_images|slice(0, 1) %}
+<!--                        <div>{{image.path}}</div>-->
+                        <div class="sliderBlock__slider__slide__image backGroundImage1" style=" background-image: url({{image.path}});"></div>
+
+                        {% endfor %}
+                        <div class="pt_27 sliderBlock__slider__slide__name">{{post.title}}</div>
                         <div class="pt_8 sliderBlock__slider__slide__age">20 лет</div>
                         <div class="pt_29 sliderBlock__slider__slide__city">Москва</div>
                     </div>
@@ -35,15 +45,8 @@ layout = "default"
             </div>
 
             <div class="HistoryContent">
-                <h1>Привет! Меня зовут Ирина.</h1>
-                <h2> Все трое моих родов проходили очень весело. Со старшими двойняшками я не подозревала о двойном
-                    сюрпризе, поэтому спокойно проходила до 42 недель, радостная и бодрая. В 10 утра приехала в роддом,
-                    в полдень легко родила дочку. Удивилась тому, что мне обещали мальчика — и увидела подозрительное
-                    замешательство на лицах медиков. Те почесали затылки и не слишком уверенно сообщили, что вот сейчас
-                    будет еще и мальчик. Я так смеялась, что почти не заметила процесса сыноизвлечения. Моя мама
-                    поперхнулась пельменем, новоиспеченный папа налил себе коньяку. Им почему-то не было так уж смешно,
-                    но шутка про «роди по акции двух и получи третьего бесплатно» — в 2003 году как раз был популярным
-                    такой анекдот — была нашей дежурной довольно долго.
+                <h1>{{post.excerpt}}</h1>
+                <h2> {{post.content_html|raw}}
                 </h2>
             </div>
         </div>
@@ -58,136 +61,7 @@ layout = "default"
 
 
     <section>
-        <div class="sliderBlock__slider" id="style-2">
-            <div class="sliderBlock__slider__slide">
-                <div class="sliderBlock__slider__slide__image backGroundImage1"></div>
-                <div class="sliderBlock__slider__slide__name">Маша</div>
-                <div class="sliderBlock__slider__slide__age">20 лет</div>
-                <div class="sliderBlock__slider__slide__city">Москва</div>
-                <div class="sliderBlock__slider__slide__text">
-                    “Привет, меня зовут Маша...
-                </div>
-            </div>
-
-            <div class="sliderBlock__slider__slide">
-                <div class="sliderBlock__slider__slide__image backGroundImage2"></div>
-                <div class="sliderBlock__slider__slide__name">Ирина</div>
-                <div class="sliderBlock__slider__slide__age">26 лет</div>
-                <div class="sliderBlock__slider__slide__city">Саратов</div>
-                <div class="sliderBlock__slider__slide__text">
-                    “Привет, меня зовут Ирина...
-                </div>
-            </div>
-
-            <div class="sliderBlock__slider__slide">
-                <div class="sliderBlock__slider__slide__image backGroundImage3"></div>
-                <div class="sliderBlock__slider__slide__name">Диана</div>
-                <div class="sliderBlock__slider__slide__age">21 год</div>
-                <div class="sliderBlock__slider__slide__city">
-                    Королев <br>
-                    МО
-                </div>
-                <div class="sliderBlock__slider__slide__text">
-                    “Привет, меня зовут Диана...
-                </div>
-            </div>
-
-            <div class="sliderBlock__slider__slide">
-                <div class="sliderBlock__slider__slide__image backGroundImage4"></div>
-                <div class="sliderBlock__slider__slide__name">Даша</div>
-                <div class="sliderBlock__slider__slide__age">16 лет</div>
-                <div class="sliderBlock__slider__slide__city">Москва</div>
-                <div class="sliderBlock__slider__slide__text">
-                    “Привет, меня зовут Даша...
-                </div>
-            </div>
-
-            <div class="sliderBlock__slider__slide">
-                <div class="sliderBlock__slider__slide__image backGroundImage1"></div>
-                <div class="sliderBlock__slider__slide__name">Маша</div>
-                <div class="sliderBlock__slider__slide__age">20 лет</div>
-                <div class="sliderBlock__slider__slide__city">Москва</div>
-                <div class="sliderBlock__slider__slide__text">
-                    “Привет, меня зовут Маша...
-                </div>
-            </div>
-
-            <div class="sliderBlock__slider__slide">
-                <div class="sliderBlock__slider__slide__image backGroundImage2"></div>
-                <div class="sliderBlock__slider__slide__name">Ирина</div>
-                <div class="sliderBlock__slider__slide__age">26 лет</div>
-                <div class="sliderBlock__slider__slide__city">Саратов</div>
-                <div class="sliderBlock__slider__slide__text">
-                    “Привет, меня зовут Ирина...
-                </div>
-            </div>
-
-            <div class="sliderBlock__slider__slide">
-                <div class="sliderBlock__slider__slide__image backGroundImage3"></div>
-                <div class="sliderBlock__slider__slide__name">Диана</div>
-                <div class="sliderBlock__slider__slide__age">21 год</div>
-                <div class="sliderBlock__slider__slide__city">
-                    Королев <br>
-                    МО
-                </div>
-                <div class="sliderBlock__slider__slide__text">
-                    “Привет, меня зовут Диана...
-                </div>
-            </div>
-
-            <div class="sliderBlock__slider__slide">
-                <div class="sliderBlock__slider__slide__image backGroundImage4"></div>
-                <div class="sliderBlock__slider__slide__name">Даша</div>
-                <div class="sliderBlock__slider__slide__age">16 лет</div>
-                <div class="sliderBlock__slider__slide__city">Москва</div>
-                <div class="sliderBlock__slider__slide__text">
-                    “Привет, меня зовут Даша...
-                </div>
-            </div>
-
-            <div class="sliderBlock__slider__slide">
-                <div class="sliderBlock__slider__slide__image backGroundImage1"></div>
-                <div class="sliderBlock__slider__slide__name">Маша</div>
-                <div class="sliderBlock__slider__slide__age">20 лет</div>
-                <div class="sliderBlock__slider__slide__city">Москва</div>
-                <div class="sliderBlock__slider__slide__text">
-                    “Привет, меня зовут Маша...
-                </div>
-            </div>
-
-            <div class="sliderBlock__slider__slide">
-                <div class="sliderBlock__slider__slide__image backGroundImage2"></div>
-                <div class="sliderBlock__slider__slide__name">Ирина</div>
-                <div class="sliderBlock__slider__slide__age">26 лет</div>
-                <div class="sliderBlock__slider__slide__city">Саратов</div>
-                <div class="sliderBlock__slider__slide__text">
-                    “Привет, меня зовут Ирина...
-                </div>
-            </div>
-
-            <div class="sliderBlock__slider__slide">
-                <div class="sliderBlock__slider__slide__image backGroundImage3"></div>
-                <div class="sliderBlock__slider__slide__name">Диана</div>
-                <div class="sliderBlock__slider__slide__age">21 год</div>
-                <div class="sliderBlock__slider__slide__city">
-                    Королев <br>
-                    МО
-                </div>
-                <div class="sliderBlock__slider__slide__text">
-                    “Привет, меня зовут Диана...
-                </div>
-            </div>
-
-            <div class="sliderBlock__slider__slide">
-                <div class="sliderBlock__slider__slide__image backGroundImage4"></div>
-                <div class="sliderBlock__slider__slide__name">Даша</div>
-                <div class="sliderBlock__slider__slide__age">16 лет</div>
-                <div class="sliderBlock__slider__slide__city">Москва</div>
-                <div class="sliderBlock__slider__slide__text">
-                    “Привет, меня зовут Даша...
-                </div>
-            </div>
-        </div>
+        {% partial 'history' %}
     </section>
 </div>
 

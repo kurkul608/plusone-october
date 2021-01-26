@@ -379,7 +379,7 @@ body {
 }
 .backGroundImage1 {
     background-size: cover;
-    background-image: url("../../images/mainPage/slider/1.png");
+    /*background-image: url("../../images/mainPage/slider/1.png");*/
 }
 .backGroundImage2 {
     background-size: cover;
@@ -398,6 +398,7 @@ body {
     margin-left: 40px;
     width: 133px;
     height: 133px;
+    border-radius: 50%;
 }
 .sliderBlock__slider__slide:hover {
     filter: drop-shadow(6px 6px 14px rgba(152, 39, 67, 0.2));
