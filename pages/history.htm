@@ -32,16 +32,22 @@ categoryPage = "history"
 
                         {% endfor %}
                         <div class="pt_27 sliderBlock__slider__slide__name">{{post.title}}</div>
-                        <div class="pt_8 sliderBlock__slider__slide__age">20 лет</div>
-                        <div class="pt_29 sliderBlock__slider__slide__city">Москва</div>
+                        <div class="pt_8 sliderBlock__slider__slide__age">{{post.custom_fields.string}}</div>
+                        <div class="pt_29 sliderBlock__slider__slide__city">{{post.custom_fields.api_code}}</div>
                     </div>
                 </div>
-                <div class="itemHiscory">
-                    <img src="{{ 'assets/images/mainPage/video/image 3.png'|theme }}" alt="">
+<!--                <div style="display: none" id="link">{{post.custom_fields.text}}</div>-->
+                <a class="itemHiscory" id="ahref">
+                    {% for image in post.featured_images|slice(1, 2) %}
+                    <!--                        <div>{{image.path}}</div>-->
+                    <img src="{{image.path}}" alt="">
+
+                    {% endfor %}
+
 
                     <video src=""></video>
 
-                </div>
+                </a>
             </div>
 
             <div class="HistoryContent">
@@ -54,8 +60,6 @@ categoryPage = "history"
 
 
     </section>
-
-
 
 
 

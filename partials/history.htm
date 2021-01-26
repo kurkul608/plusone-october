@@ -21,8 +21,9 @@ postPage = "history"
 
             {% endfor %}
             <div class="sliderBlock__slider__slide__name">{{post.title}}</div>
-            <div class="sliderBlock__slider__slide__age">20 лет</div>
-            <div class="sliderBlock__slider__slide__city">Москва</div>
+            <div class="sliderBlock__slider__slide__age">{{post.custom_fields.string}}</div>
+            <div class="sliderBlock__slider__slide__city">{{post.custom_fields.api_code}}</div>
+
             <div class="sliderBlock__slider__slide__text">
                 {{post.excerpt}}
             </div>
