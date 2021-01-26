@@ -1,0 +1,19 @@
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "stori"
+postsPerPage = 25
+noPostsMessage = "Записей не найдено"
+sortOrder = "published_at desc"
+categoryPage = "storyPage"
+postPage = "storyPage"
+==
+
+{% set posts = blogPosts.posts %}
+<div class="actualBlock__sliders">
+    {% for post in posts %}
+    <a href="{{post.url}}" class="actualBlock__sliders__slide">
+        <p>{{post.title}}</p>
+    </a>
+    {% endfor %}
+
+</div>
