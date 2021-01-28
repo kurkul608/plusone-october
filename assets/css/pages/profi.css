@@ -47,9 +47,9 @@ body {
     justify-content: space-between;
     height: 149px;
     margin-top: 33px;
-    background: #FFFFFF;
+    /* background: #FFFFFF; */
     cursor: pointer;
-
+    background-size: cover;
     min-width: 200px;
 }
 .actualBlock__main__questionBlock p {
@@ -60,6 +60,9 @@ body {
     margin-bottom: 0;
     margin-top: 0;
     color: #3C3C3B;
+}
+.actualBlock__main__questionBlock:hover {
+    box-shadow: 8px 12px 20px rgba(19, 56, 112, 0.22);
 }
 .mt0_sd{
     padding-top: 0px !important;
@@ -91,23 +94,23 @@ body {
 }
 .tobeCont{
     font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 24px;
-line-height: 28px;
-text-decoration-line: underline;
-color: rgba(64, 63, 63, 0.73);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-decoration-line: underline;
+    color: rgba(64, 63, 63, 0.73);
 }
 .Text_S_0{
     font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-font-size: 30px;
-line-height: 35px;
-display: flex;
-align-items: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
 
-color: #002E42;
+    color: #002E42;
 
 }
 .scrollItem_Box{
@@ -117,6 +120,9 @@ color: #002E42;
     border-radius: 8px;
     margin-bottom: 10px;
     position: relative;
+}
+.scrollItem_Box:hover {
+    box-shadow: 8px 12px 20px rgba(19, 56, 112, 0.22);
 }
 .itemSec_0:last-child{
     width: 30%;
@@ -157,42 +163,42 @@ color: #002E42;
 
 .scrollItem::-webkit-scrollbar {
     width: 12px;
-  }
-  .scrollItem::-webkit-scrollbar-button {
+}
+.scrollItem::-webkit-scrollbar-button {
     width: 2px;
     height: 2px;
     cursor: pointer;
-  }
-  .scrollItem::-webkit-scrollbar-thumb {
+}
+.scrollItem::-webkit-scrollbar-thumb {
     /*height: 6px;*/
     border: 3px solid transparent;
     background: #002E42;
     /*border-radius: 9px;*/
     background-clip: content-box;
     /*border: 1px solid #E4003A;*/
-  }
-  
-  
-  .scrollItem::-webkit-scrollbar-track {
+}
+
+
+.scrollItem::-webkit-scrollbar-track {
     background: rgba(0, 46, 66, 0.5);
     border: 7px solid transparent;
     background-clip: content-box;
-  }
+}
 
-  @media (max-width: 1542px){
+@media (max-width: 1542px){
     .itemSec_0:first-child {
         width: 70%;
         padding-right: 4%;
     }
     .actualBlock__main__questionBlock {
         max-width: 282px;
- 
+
     }
 
-  }
+}
 
-  
-  @media (max-width: 1000px){
+
+@media (max-width: 1000px){
 
     .actualBlock__main{
         display: block;
@@ -211,10 +217,10 @@ color: #002E42;
     .itemSec_0:last-child {
         width: 100%;
     }
-  }
+}
 
 
-  @media (max-width: 765px){
+@media (max-width: 765px){
 
     .scrollItem {
         overflow-y: initial;
@@ -232,10 +238,10 @@ color: #002E42;
         display: block;
 
     }
-  }
+}
 
 
-  @media (max-width: 350px) {
+@media (max-width: 350px) {
     .itemSec_0:last-child {
         min-width: auto;
     }
@@ -243,4 +249,4 @@ color: #002E42;
         width: 100%;
 
     }
-  }
+}

@@ -1,5 +1,5 @@
-title = "Для специалистов"
-url = "/professional"
+title = "Для каждого"
+url = "/foreach"
 layout = "default"
 is_hidden = 0
 
@@ -21,12 +21,16 @@ sortOrder = "published_at desc"
 categoryPage = "article"
 postPage = "article"
 ==
+
 {% put styles %}
-<link rel="stylesheet" href="{{ 'assets/css/all.css'|theme }}">
+<!--<link href="{{ 'assets/css/pages/index.css'|theme }}" rel="stylesheet">-->
 
 <link rel="stylesheet" href="{{ 'assets/css/components/ComponentBaner.css'|theme }}">
 <link rel="stylesheet" href="{{ 'assets/css/pages/profi.css'|theme }}">
+<link rel="stylesheet" href="{{ 'assets/css/pages/forEath.css'|theme }}">
+<link rel="stylesheet" href="{{ 'assets/css/all.css'|theme }}">
 {% endput %}
+
 <section>
 
     <section>
@@ -53,19 +57,17 @@ postPage = "article"
         </div>
     </section>
 
-
-
     {% set posts = blogPosts.posts %}
+
     <section class="secText_0">
         <div class="itemSec_0">
-            <h2 class="tittleTextS mt0_sd">Планирование аборта: 12 вещей, которые делают правильные врачи</h2>
+            <h2 class="tittleTextS mt0_sd">Какие права есть у беременной женщины на работе</h2>
             <h3 class="textH3_0">Если идти в медучреждение вы по тем или иным причинам не можете, то домашние тесты в помощь. Конечно, через несколько дней после зачатия такой тест ничего не покажет. Все тесты на определение ХГЧ в моче нужно делать не раньше, чем за неделю до начала месячных. Самые дешевые тест-полоски покажут действительный результат только с первого дня задержки. Тесты подороже – струйный или планшетный, могут определить беременность как раз за неделю до критических дней. Вообще, чтобы не гадать на кофейной гуще – рано ли делать тест, или уже пора – нужно знать некоторые значения. Такие домашние тесты имеют чувствительность от 10 до 25 Mme/ml. Так вот чем меньше цифра, тем чувствительнее тест. Например, тест «десяточка» может показать беременность уже в четыре недели. Какая у вас может быть неделя – посчитать легко, нужно вспомнить первый день своих последних месячных – это и будет точка отсчета.</h3>
             <div class="tobeCont">читать далее...</div>
         </div>
         <div class="itemSec_0">
             <p class="Text_S_0">Читать далее</p>
             <div class="scrollItem">
-
                 {% for post in posts %}
                 {% for image in post.featured_images|slice(0,1) %}
                 <div class="scrollItem_Box" >
@@ -77,12 +79,14 @@ postPage = "article"
                 </div>
                 {% endfor %}
                 {% endfor %}
+
+
+
             </div>
 
         </div>
 
     </section>
-
 
 
     {% set posts = blogPostsActual.posts %}
@@ -136,54 +140,68 @@ postPage = "article"
     <section>
         <h2 class="tittleTextS ">Полезные материалы</h2>
 
-
-
-
-
         <div class="actualBlock__sliders background__Ping">
             <div class="actualBlock__sliders__slide">
-                <p>Информационное письмо Президента НСОИМ, академи...</p>
+                <div class="bookBy_0">
+                    <img src="{{ 'assets/images/mainPage/forEath/book.png'|theme }}" alt="">
+                </div>
+                <p class="textForBook_0">Как выносить и родить здорово...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <div class="bookBy_0">
+                    <img src="{{ 'assets/images/mainPage/forEath/book.png'|theme }}" alt="">
+                </div>
+                <p class="textForBook_0">Как выносить и родить здорово...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <div class="bookBy_0">
+                    <img src="{{ 'assets/images/mainPage/forEath/book.png'|theme }}" alt="">
+                </div>
+                <p class="textForBook_0">Как выносить и родить здорово...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <div class="bookBy_0">
+                    <img src="{{ 'assets/images/mainPage/forEath/book.png'|theme }}" alt="">
+                </div>
+                <p class="textForBook_0">Как выносить и родить здорово...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <div class="bookBy_0">
+                    <img src="{{ 'assets/images/mainPage/forEath/book.png'|theme }}" alt="">
+                </div>
+                <p class="textForBook_0">Как выносить и родить здорово...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <div class="bookBy_0">
+                    <img src="{{ 'assets/images/mainPage/forEath/book.png'|theme }}" alt="">
+                </div>
+                <p class="textForBook_0">Как выносить и родить здорово...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <div class="bookBy_0">
+                    <img src="{{ 'assets/images/mainPage/forEath/book.png'|theme }}" alt="">
+                </div>
+                <p class="textForBook_0">Как выносить и родить здорово...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <div class="bookBy_0">
+                    <img src="{{ 'assets/images/mainPage/forEath/book.png'|theme }}" alt="">
+                </div>
+                <p class="textForBook_0">Как выносить и родить здорово...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <div class="bookBy_0">
+                    <img src="{{ 'assets/images/mainPage/forEath/book.png'|theme }}" alt="">
+                </div>
+                <p class="textForBook_0">Как выносить и родить здорово...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <div class="bookBy_0">
+                    <img src="{{ 'assets/images/mainPage/forEath/book.png'|theme }}" alt="">
+                </div>
+                <p class="textForBook_0">Как выносить и родить здорово...</p>
             </div>
 
-            <div class="actualBlock__sliders__slide">
-                <p>Информационное письмо Президента НСОИМ, академи...</p>
-            </div>
-            <div class="actualBlock__sliders__slide">
-                <p>Информационное письмо Президента НСОИМ, академи...</p>
-            </div>
-            <div class="actualBlock__sliders__slide">
-                <p>Информационное письмо Президента НСОИМ, академи...</p>
-            </div>
-            <div class="actualBlock__sliders__slide">
-                <p>Информационное письмо Президента НСОИМ, академи...</p>
-            </div>
-            <div class="actualBlock__sliders__slide">
-                <p>Информационное письмо Президента НСОИМ, академи...</p>
-            </div>
-            <div class="actualBlock__sliders__slide">
-                <p>Информационное письмо Президента НСОИМ, академи...</p>
-            </div>
-            <div class="actualBlock__sliders__slide">
-                <p>Информационное письмо Президента НСОИМ, академи...</p>
-            </div>
-            <div class="actualBlock__sliders__slide">
-                <p>Информационное письмо Президента НСОИМ, академи...</p>
-            </div>
-            <div class="actualBlock__sliders__slide">
-                <p>Информационное письмо Президента НСОИМ, академи...</p>
-            </div>
-            <div class="actualBlock__sliders__slide">
-                <p>Информационное письмо Президента НСОИМ, академи...</p>
-            </div>
-            <div class="actualBlock__sliders__slide">
-                <p>Информационное письмо Президента НСОИМ, академи...</p>
-            </div>
-            <div class="actualBlock__sliders__slide">
-                <p>Информационное письмо Президента НСОИМ, академи...</p>
-            </div>
-            <div class="actualBlock__sliders__slide">
-                <p>Информационное письмо Президента НСОИМ, академи...</p>
-            </div>
 
 
 
@@ -193,6 +211,8 @@ postPage = "article"
 
 
 </section>
+
 {% put scripts %}
 <script src="{{ 'assets/js/components/component_baner.js'|theme }}"></script>
 {% endput %}
+
