@@ -1,0 +1,29 @@
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "statya-ya-beremenna"
+postsPerPage = 4
+noPostsMessage = "Записей не найдено"
+sortOrder = "published_at desc"
+categoryPage = "article"
+postPage = "article"
+==
+
+{% set posts = blogPosts.posts %}
+{% for post in posts %}
+{% for image in post.featured_images|slice(0,1) %}
+
+<a
+        href="{{post.url}}"
+        class="pregnantSection__main__questionBlock blueBackGround"
+        style='background-image: url({{ image.path }});'
+>
+    <p>{{post.title}}</p>
+    <img
+            src="{{ 'assets/images/mainPage/firstSlide/arrow.png'|theme }}"
+            alt=""
+    />
+</a>
+{% endfor %}
+{% endfor %}
+
+

@@ -1,0 +1,31 @@
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "statya-aktualnoe"
+postsPerPage = 4
+noPostsMessage = "Записей не найдено"
+sortOrder = "published_at desc"
+categoryPage = "article"
+postPage = "article"
+==
+
+{% set posts = blogPosts.posts %}
+{% for post in posts %}
+{% for image in post.featured_images|slice(0,1) %}
+<a href="{{post.url}}"
+   class="actualBlock__main__questionBlock"
+   style='background-image: url({{ image.path }});'
+>
+    <p>{{post.title}}</p>
+    <div class="actualBlock__main__questionBlock__row">
+        <p>{{post.published_at|date('d.m.Y')}}</p>
+<!--        <p>01.12.2020</p>-->
+        <img
+                src="./assets/images/mainPage/actual/Arrow.png"
+                alt=""
+        />
+    </div>
+</a>
+
+
+{% endfor %}
+{% endfor %}

@@ -91,23 +91,23 @@ body {
 }
 .tobeCont{
     font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 28px;
-    text-decoration-line: underline;
-    color: rgba(64, 63, 63, 0.73);
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+text-decoration-line: underline;
+color: rgba(64, 63, 63, 0.73);
 }
 .Text_S_0{
     font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 35px;
-    display: flex;
-    align-items: center;
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 35px;
+display: flex;
+align-items: center;
 
-    color: #002E42;
+color: #002E42;
 
 }
 .scrollItem_Box{
@@ -157,42 +157,42 @@ body {
 
 .scrollItem::-webkit-scrollbar {
     width: 12px;
-}
-.scrollItem::-webkit-scrollbar-button {
+  }
+  .scrollItem::-webkit-scrollbar-button {
     width: 2px;
     height: 2px;
     cursor: pointer;
-}
-.scrollItem::-webkit-scrollbar-thumb {
+  }
+  .scrollItem::-webkit-scrollbar-thumb {
     /*height: 6px;*/
     border: 3px solid transparent;
     background: #002E42;
     /*border-radius: 9px;*/
     background-clip: content-box;
     /*border: 1px solid #E4003A;*/
-}
-
-
-.scrollItem::-webkit-scrollbar-track {
+  }
+  
+  
+  .scrollItem::-webkit-scrollbar-track {
     background: rgba(0, 46, 66, 0.5);
     border: 7px solid transparent;
     background-clip: content-box;
-}
+  }
 
-@media (max-width: 1542px){
+  @media (max-width: 1542px){
     .itemSec_0:first-child {
         width: 70%;
         padding-right: 4%;
     }
     .actualBlock__main__questionBlock {
         max-width: 282px;
-
+ 
     }
 
-}
+  }
 
-
-@media (max-width: 1000px){
+  
+  @media (max-width: 1000px){
 
     .actualBlock__main{
         display: block;
@@ -211,10 +211,10 @@ body {
     .itemSec_0:last-child {
         width: 100%;
     }
-}
+  }
 
 
-@media (max-width: 765px){
+  @media (max-width: 765px){
 
     .scrollItem {
         overflow-y: initial;
@@ -232,10 +232,10 @@ body {
         display: block;
 
     }
-}
+  }
 
 
-@media (max-width: 350px) {
+  @media (max-width: 350px) {
     .itemSec_0:last-child {
         min-width: auto;
     }
@@ -243,4 +243,4 @@ body {
         width: 100%;
 
     }
-}
+  }
