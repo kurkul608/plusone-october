@@ -1,0 +1,16 @@
+title = "test"
+url = "/test"
+is_hidden = 1
+
+[builderList]
+modelClass = "MolchanovPetr\Regiony\Models\Region"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "region_name"
+noRecordsMessage = "No records found"
+detailsPage = "testshow"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
+==
+{% component 'builderList' %}

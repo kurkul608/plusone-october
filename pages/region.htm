@@ -1,0 +1,169 @@
+title = "Регион"
+url = "/region/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "MolchanovPetr\Regiony\Models\Region"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "region_name"
+notFoundMessage = "Record not found"
+==
+{% put styles %}
+<link rel="stylesheet" href="{{ 'assets/css/all.css'|theme }}">
+<link rel="stylesheet" href="{{ 'assets/css/components/ComponentContact.css'|theme }}">
+<link rel="stylesheet" href="{{ 'assets/css/pages/oblast.css'|theme }}">
+<link rel="stylesheet" href="{{ 'assets/css/components/ComponentImageInteractiv.css'|theme }}">
+{% endput %}
+
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+<div class="boxFor1SectionDiv">
+    <section>
+        <section class="topContent">
+            <div class="d_0">
+                <a class="d_0_link" href="">- Куда обратиться за помощью?</a>
+
+                <h1 class="descriptionTextS h1Help">{{ attribute(record, displayColumn) }}</h1>
+                <p class="descriptionTextS">— Телефоны доверия для беременных
+                </p>
+            </div>
+            <div class="d_0">
+                <img src="{{ 'assets/images/mainPage/thirdSlide/Image_0.svg'|theme }}" alt="Куда обратиться за помощью?">
+            </div>
+        </section>
+        <section id="sec_2">
+            <div class="flexBoxS">
+                <div class="s_1">
+                    <p class="helpersTextS s_01">Номера телефонов
+                        для всех регинонов РФ:</p>
+                    <a class="s_03 tittleTextS" href="tel:88001234567">8 (800) 123-45-67</a>
+                    <a class="s_03 tittleTextS" href="tel:88001234567">8 (800) 123-45-67</a>
+                    <a class="s_03 tittleTextS" href="tel:88001234567">8 (800) 123-45-67</a>
+                </div>
+                <div class="s_1">
+                    <p class="helpersTextS s_02">What’s App <br /> для тех, кто не может позвонить</p>
+                    <a class="s_03 tittleTextS" href="tel:88001234567">8 (800) 123-45-67</a>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!--  -->
+
+
+        <section class="topContent">
+            <div class="d_0">
+                <a class="d_0_link" href="">- Куда обратиться за помощью?</a>
+
+                <h1 class="descriptionTextS h1Help">— Информационные ресурсы</h1>
+
+
+
+                <div class="actualBlock__sliders background__Ping">
+                    <div class="actualBlock__sliders__slide">
+                        <p>Карта НКО, помогающих
+                            беременным</p>
+                    </div>
+
+                    <div class="actualBlock__sliders__slide">
+                        <p>Поздравляем,
+                            Вы-мама!</p>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                <h2 class="descriptionTextS h1Help">— Социальная поддержка</h2>
+
+
+
+                <p class="descriptionTextS">Узнать о государственных мерах социальной поддержки, положенных выплатах,
+                    материнском капитале, дополнительных выплатах
+                    и государственных пособиях можно:
+                </p>
+
+
+
+                <p class="descriptionTextS">
+                <ul class="options-list" style="
+    width: 878px;
+    margin-left: -16px;
+    padding-top: 36px;
+">
+                    {{ record.description | raw }}
+                </ul>
+                </p>
+
+
+            </div>
+            <div class="d_0">
+                <img src="{{ 'assets/images/mainPage/thirdSlide/Image_0.svg'|theme }}" alt="Куда обратиться за помощью?">
+            </div>
+        </section>
+
+
+
+
+        <section>
+            <div class="actualBlock__sliders background__Ping" style="
+    padding-top: 100px;
+">
+                <div class="actualBlock__sliders__slide FFF_0">
+                    <p> {{ record.address_first}}
+                    </p>
+                </div>
+                {% if record.address_second %}
+                <div class="actualBlock__sliders__slide FFF_0">
+                    <p>{{ record.address_second }}
+                    </p>
+                </div>
+                {% endif %}
+                {% if record.address_third %}
+                <div class="actualBlock__sliders__slide FFF_0">
+                    <p>{{ record.address_third }}
+                    </p>
+                </div>
+                {% endif %}
+                {% if record.address_fourth %}
+                <div class="actualBlock__sliders__slide FFF_0">
+                    <p>{{ record.address_fourth }}
+                    </p>
+                </div>
+                {% endif %}
+            </div>
+        </section>
+
+
+        <section>
+            <p class="descriptionTextS" style="
+    font-size: 30px !important;
+    max-width: 883px;
+    line-height: 37px;
+    padding-top: 78px;
+">Mepы социальной поддержки молодых семей и семей
+                с детьми размещены на сайте: <span style="
+        color: #e4003a;
+        font-weight: bold;
+    ">www.olarb.49med.ru</span>
+            </p>
+        </section>
+    </section>
+
+
+
+</div>
+
+
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

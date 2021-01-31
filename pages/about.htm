@@ -14,27 +14,184 @@ is_hidden = 0
 {% endput %}
 
 <section>
-    <div class="component_Baner">
+    <section>
+        <div class="component_Baner">
 
-        <div class="slider" data-pos="0">
-            <div class="slider__slides">
-                <div class="slider__slide"></div>
-                <div class="slider__slide"></div>
-                <div class="slider__slide"></div>
-                <div class="slider__slide"></div>
+            <div class="slider" data-pos="0">
+                <div class="slider__slides">
+                    <div class="slider__slide"></div>
+                    <div class="slider__slide"></div>
+                    <div class="slider__slide"></div>
+                    <div class="slider__slide"></div>
+                </div>
+                <div class="slider__dots">
+                    <div class="BannerOpt"><img src="{{ 'assets/images/mainPage/actual/ArrowRED.svg'|theme }}" alt=""></div>
+                    <span href="#" class="slider__indicator"></span>
+                    <span href="#" class="slider__dot" data-pos="0"></span>
+                    <span href="#" class="slider__dot" data-pos="1"></span>
+                    <span href="#" class="slider__dot" data-pos="2"></span>
+                    <span href="#" class="slider__dot" data-pos="3"></span>
+                    <div class="BannerOpt"><img src="{{ 'assets/images/mainPage/actual/ArrowRED.svg'|theme }}" alt=""></div>
+                </div>
             </div>
-            <div class="slider__dots">
-                <div class="BannerOpt"><img src="{{ 'assets/images/mainPage/actual/ArrowRED.svg'|theme }}" alt=""></div>
-                <span href="#" class="slider__indicator"></span>
-                <span href="#" class="slider__dot" data-pos="0"></span>
-                <span href="#" class="slider__dot" data-pos="1"></span>
-                <span href="#" class="slider__dot" data-pos="2"></span>
-                <span href="#" class="slider__dot" data-pos="3"></span>
-                <div class="BannerOpt"><img src="{{ 'assets/images/mainPage/actual/ArrowRED.svg'|theme }}" alt=""></div>
+
+        </div>
+    </section>
+    <section>
+        {% component 'contenteditor' file="about/title.htm" fixture="h2" tools="" class="tittleTextS" %}
+        {% component 'contenteditor' file="about/target.htm" fixture="p" tools="" class="descriptionTextS" %}
+    </section>
+
+    <section id="form">
+        {% component 'contenteditor' file="about/become.htm" fixture="h2" tools="" class="tittleTextS" %}
+        <div class="flexForm">
+            <div class="leftForm">
+                <div class="roundS"></div>
+                <p class="addImageS">Добавить фото</p>
+                <p class="addImageS">Изменить</p>
+            </div>
+
+
+            <div class="rightForm">
+
+
+                <form action="" method="post">
+
+                    <div class="formFlexInputs">
+
+                        <div class="itemInpustS">
+                            <p for="POST-name">Имя</p>
+                            <input id="POST-name" type="text" name="name">
+                        </div>
+
+                        <div class="itemInpustS">
+                            <p for="POST-Fname">Фамилия</p>
+                            <input id="POST-Fname" type="text" name="name">
+                        </div>
+                    </div>
+
+                    <div class="formFlexInputs">
+
+                        <div class="itemInpustS">
+                            <p for="POST-old">Возраст</p>
+                            <input id="POST-old" type="number" name="name">
+                        </div>
+
+                        <div class="itemInpustS">
+                            <p for="POST-phone">Телефон</p>
+                            <input id="POST-phone" type="text" name="name">
+                        </div>
+                    </div>
+
+                    <div class="formFlexInputs">
+
+
+                        <div class="itemInpustS">
+                            <p for="POST-mail">E-mail</p>
+                            <input id="POST-mail" type="text" name="name">
+                        </div>
+                    </div>
+
+                    <div class="formFlexInputs">
+
+
+                        <div class="itemInpustS castomScrolLine">
+                            <p for="POST-description">Сообщение</p>
+                            <textarea id="POST-description" type="text" name="name">Расскажите, почему вы решили стать волнтером нашего проекта</textarea>
+                        </div>
+                    </div>
+
+                    <div class="formFlexInputs">
+                        <button class="buttonRequest_S" type="submit" value="Save">Отправить</button>
+                    </div>
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="contactsS">
+        {% component 'contenteditor' file="about/contacts/title.htm" fixture="h2" tools="" class="tittleTextS" %}
+        <div class="flexBoxS">
+
+
+            <div class="s_1">
+                <p class="helpersTextS s_01">Номера телефонов
+                    для всех регинонов РФ:</p>
+
+                <a class="s_03 tittleTextS" href="tel:88001234567">{% component 'contenteditor' file="about/contacts/first.htm" fixture="" tools="" class="" %}</a>
+                <a class="s_03 tittleTextS" href="tel:88001234567">{% component 'contenteditor' file="about/contacts/second.htm" fixture="" tools="" class="" %}</a>
+                <a class="s_03 tittleTextS" href="tel:88001234567">{% component 'contenteditor' file="about/contacts/third.htm" fixture="" tools="" class="" %}</a>
+            </div>
+            <div class="s_1">
+                {% component 'contenteditor' file="about/contacts/messenger.htm" fixture="p" tools="" class="helpersTextS s_02" %}
+                <a class="s_03 tittleTextS" href="tel:88001234567">{% component 'contenteditor' file="about/contacts/forth.htm" fixture="" tools="" class="" %}</a>
             </div>
         </div>
 
-    </div>
+
+
+    </section>
+
+    <section class="flexBaseSSECtion">
+        <h2 class="tittleTextS">Нормативно-правовая база</h2>
+
+
+        <div class="actualBlock__sliders background__Ping">
+            <div class="actualBlock__sliders__slide">
+                <p>Информационное письмо Президента НСОИМ, академи...</p>
+            </div>
+
+            <div class="actualBlock__sliders__slide">
+                <p>Информационное письмо Президента НСОИМ, академи...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <p>Информационное письмо Президента НСОИМ, академи...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <p>Информационное письмо Президента НСОИМ, академи...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <p>Информационное письмо Президента НСОИМ, академи...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <p>Информационное письмо Президента НСОИМ, академи...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <p>Информационное письмо Президента НСОИМ, академи...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <p>Информационное письмо Президента НСОИМ, академи...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <p>Информационное письмо Президента НСОИМ, академи...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <p>Информационное письмо Президента НСОИМ, академи...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <p>Информационное письмо Президента НСОИМ, академи...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <p>Информационное письмо Президента НСОИМ, академи...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <p>Информационное письмо Президента НСОИМ, академи...</p>
+            </div>
+            <div class="actualBlock__sliders__slide">
+                <p>Информационное письмо Президента НСОИМ, академи...</p>
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+
 </section>
 
 
@@ -42,165 +199,17 @@ is_hidden = 0
 
 
 
-<section>
-    {% component 'contenteditor' file="about/title.htm" fixture="h2" tools="" class="tittleTextS" %}
-    {% component 'contenteditor' file="about/target.htm" fixture="p" tools="" class="descriptionTextS" %}
-</section>
 
 
 
-<section id="form">
-    {% component 'contenteditor' file="about/become.htm" fixture="h2" tools="" class="tittleTextS" %}
-    <div class="flexForm">
-        <div class="leftForm">
-            <div class="roundS"></div>
-            <p class="addImageS">Добавить фото</p>
-            <p class="addImageS">Изменить</p>
-        </div>
-
-
-        <div class="rightForm">
-
-
-            <form action="" method="post">
-
-                <div class="formFlexInputs">
-
-                    <div class="itemInpustS">
-                        <p for="POST-name">Имя</p>
-                        <input id="POST-name" type="text" name="name">
-                    </div>
-
-                    <div class="itemInpustS">
-                        <p for="POST-Fname">Фамилия</p>
-                        <input id="POST-Fname" type="text" name="name">
-                    </div>
-                </div>
-
-                <div class="formFlexInputs">
-
-                    <div class="itemInpustS">
-                        <p for="POST-old">Возраст</p>
-                        <input id="POST-old" type="number" name="name">
-                    </div>
-
-                    <div class="itemInpustS">
-                        <p for="POST-phone">Телефон</p>
-                        <input id="POST-phone" type="text" name="name">
-                    </div>
-                </div>
-
-                <div class="formFlexInputs">
-
-
-                    <div class="itemInpustS">
-                        <p for="POST-mail">E-mail</p>
-                        <input id="POST-mail" type="text" name="name">
-                    </div>
-                </div>
-
-                <div class="formFlexInputs">
-
-
-                    <div class="itemInpustS castomScrolLine">
-                        <p for="POST-description">Сообщение</p>
-                        <textarea id="POST-description" type="text" name="name">Расскажите, почему вы решили стать волнтером нашего проекта</textarea>
-                    </div>
-                </div>
-
-                <div class="formFlexInputs">
-                    <button class="buttonRequest_S" type="submit" value="Save">Отправить</button>
-                </div>
-
-
-            </form>
-
-        </div>
-
-    </div>
-
-</section>
 
 
 
-<section id="contactsS">
-    {% component 'contenteditor' file="about/contacts/title.htm" fixture="h2" tools="" class="tittleTextS" %}
-    <div class="flexBoxS">
-
-
-        <div class="s_1">
-            <p class="helpersTextS s_01">Номера телефонов
-                для всех регинонов РФ:</p>
-
-            <a class="s_03 tittleTextS" href="tel:88001234567">{% component 'contenteditor' file="about/contacts/first.htm" fixture="" tools="" class="" %}</a>
-            <a class="s_03 tittleTextS" href="tel:88001234567">{% component 'contenteditor' file="about/contacts/second.htm" fixture="" tools="" class="" %}</a>
-            <a class="s_03 tittleTextS" href="tel:88001234567">{% component 'contenteditor' file="about/contacts/third.htm" fixture="" tools="" class="" %}</a>
-        </div>
-        <div class="s_1">
-            {% component 'contenteditor' file="about/contacts/messenger.htm" fixture="p" tools="" class="helpersTextS s_02" %}
-            <a class="s_03 tittleTextS" href="tel:88001234567">{% component 'contenteditor' file="about/contacts/forth.htm" fixture="" tools="" class="" %}</a>
-        </div>
-    </div>
 
 
 
-</section>
-
-<section class="flexBaseSSECtion">
-    <h2 class="tittleTextS">Нормативно-правовая база</h2>
 
 
-    <div class="actualBlock__sliders background__Ping">
-        <div class="actualBlock__sliders__slide">
-            <p>Информационное письмо Президента НСОИМ, академи...</p>
-        </div>
-
-        <div class="actualBlock__sliders__slide">
-            <p>Информационное письмо Президента НСОИМ, академи...</p>
-        </div>
-        <div class="actualBlock__sliders__slide">
-            <p>Информационное письмо Президента НСОИМ, академи...</p>
-        </div>
-        <div class="actualBlock__sliders__slide">
-            <p>Информационное письмо Президента НСОИМ, академи...</p>
-        </div>
-        <div class="actualBlock__sliders__slide">
-            <p>Информационное письмо Президента НСОИМ, академи...</p>
-        </div>
-        <div class="actualBlock__sliders__slide">
-            <p>Информационное письмо Президента НСОИМ, академи...</p>
-        </div>
-        <div class="actualBlock__sliders__slide">
-            <p>Информационное письмо Президента НСОИМ, академи...</p>
-        </div>
-        <div class="actualBlock__sliders__slide">
-            <p>Информационное письмо Президента НСОИМ, академи...</p>
-        </div>
-        <div class="actualBlock__sliders__slide">
-            <p>Информационное письмо Президента НСОИМ, академи...</p>
-        </div>
-        <div class="actualBlock__sliders__slide">
-            <p>Информационное письмо Президента НСОИМ, академи...</p>
-        </div>
-        <div class="actualBlock__sliders__slide">
-            <p>Информационное письмо Президента НСОИМ, академи...</p>
-        </div>
-        <div class="actualBlock__sliders__slide">
-            <p>Информационное письмо Президента НСОИМ, академи...</p>
-        </div>
-        <div class="actualBlock__sliders__slide">
-            <p>Информационное письмо Президента НСОИМ, академи...</p>
-        </div>
-        <div class="actualBlock__sliders__slide">
-            <p>Информационное письмо Президента НСОИМ, академи...</p>
-        </div>
-
-
-
-    </div>
-
-
-</section>
 
 {% put scripts %}
 <script src="{{ 'assets/js/components/component_baner.js'|theme }}"></script>

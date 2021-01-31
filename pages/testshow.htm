@@ -1,0 +1,12 @@
+title = "testShow"
+url = "/testshow/:slug"
+is_hidden = 1
+
+[builderDetails]
+modelClass = "MolchanovPetr\Regiony\Models\Region"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "title"
+notFoundMessage = "Record not found"
+==
+{% component 'builderDetails' %}

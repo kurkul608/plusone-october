@@ -4,6 +4,17 @@ layout = "main"
 is_hidden = 0
 
 [contenteditor]
+
+[builderList]
+modelClass = "MolchanovPetr\Regiony\Models\Region"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "region_name"
+noRecordsMessage = "No records found"
+detailsPage = "region"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
 ==
 {% put styles %}
 <link href="{{ 'assets/css/pages/index.css'|theme }}" rel="stylesheet">
@@ -151,46 +162,60 @@ is_hidden = 0
 
 </section>
 
-<!--<section class="last__section" id="stopScroll">-->
-<!--    <section class="actual__second" >-->
-<!--        <div class="container__new">-->
-<!--            <div class="advice">— Советы молодым мамам</div>-->
+<section class="last__section" id="stopScroll">
+    <section class="actual__second" >
+        <div class="container__new">
+            <div class="advice">— Советы молодым мамам</div>
 
-<!--            {% partial 'story' %}-->
-<!--        </div>-->
-<!--        &lt;!&ndash;      </div>&ndash;&gt;-->
-<!--    </section>-->
-<!--    <section id="sec_3">-->
-<!--        <h2 class="tittleTextS">Поддержка <br/>на федеральном уровне</h2>-->
-<!--        <div class="boxImages">-->
-<!--            <img src="assets/images/map/Image_1.jpg" alt="Поддержка на федеральном уровне" >-->
-
-
-<!--        </div>-->
+            {% partial 'story' %}
+        </div>
+        <!--      </div>-->
+    </section>
+    <section id="sec_3">
+        <h2 class="tittleTextS">Поддержка <br/>на федеральном уровне</h2>
+        <div class="boxImages">
+            <img src="assets/images/map/Image_1.jpg" alt="Поддержка на федеральном уровне" >
 
 
+        </div>
+        
+        
+        {% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
 
-<!--        <div class="felxForLinks_S">-->
-<!--            <div class="itemForLinks_S">-->
-<!--                <p class="textForTowns"><a href="">Магаданская область</a></p>-->
-<!--                <p class="textForTowns"><a href="">Свердловская область</a></p>-->
-<!--                <p class="textForTowns"><a href="">Тюменская область</a></p>-->
-<!--                <p class="textForTowns"><a href="">Алтайский край</a></p>-->
-<!--            </div>-->
-<!--            <div class="itemForLinks_S">-->
-<!--                <p class="textForTowns"><a href="">Нижний Новгород</a></p>-->
-<!--                <p class="textForTowns"><a href="">Ставропольский край</a></p>-->
-<!--                <p class="textForTowns"><a href="">Республика Татарстан</a></p>-->
-<!--            </div>-->
-<!--            <div class="itemForLinks_S">-->
-<!--                <p class="textForTowns"><a href="">Пензенская область</a></p>-->
-<!--                <p class="textForTowns"><a href="">Смоленская область</a></p>-->
-<!--                <p class="textForTowns"><a href="">Самарская область</a></p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
 
-<!--</section>-->
+        
+        
+       <div class="felxForLinks_S">
+            <div class="itemForLinks_S">
+                 {% for record in records %}
+            {# Use spaceless tag to remove spaces inside the A tag. #}
+            {% spaceless %}
+                {% if detailsPage %}
+                <p class="textForTowns">
+                    <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">
+                {% endif %}
+
+                {{ attribute(record, displayColumn) }}
+
+                {% if detailsPage %}
+                    </a></p>
+                {% endif %}
+            {% endspaceless %}
+    {% else %}
+        <li class="no-data">{{ noRecordsMessage }}</li>
+    {% endfor %}
+                
+            </div>
+            
+        </div>
+    </section>
+
+</section>
 
 
 {% put scripts %}
