@@ -617,12 +617,30 @@ background: rgba(255, 90, 135, 0.8611);
 .container__new {
     max-width: 1418px;
     min-width: 768px;
-    /*height: 100vh;*/
-    /*height: 100%;*/
     margin: 0 auto;
     padding:  0 121px;
 }
 
 .last__section {
     min-height: 100vh;
+    /*background: linear-gradient(180deg, #FFCDDA 0%, #9ED9F3 100%);*/
+}
+.main-help {
+    background: linear-gradient(180deg, #FFCDDA 0%, #9ED9F3 100%);
+    padding-top: 127px;
+}
+.main-help-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 49px;
+
+    color: #002E42;
+    margin-bottom: 27px;
+}
+.mapBox {
+    margin-bottom: 50px;
+}
+.textForTowns {
+    margin-bottom: 30px;
 }
