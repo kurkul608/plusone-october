@@ -30,6 +30,7 @@
     height: 100%;
     object-fit: cover;
     background-size: cover !important;
+    background-position: center !important;
   }
   .slider__dots {
     display: flex;
@@ -85,16 +86,16 @@
       height: 460px;
   }
   .slider__slide:nth-child(1) {
-    background: url(https://static9.depositphotos.com/1594308/1110/i/600/depositphotos_11107478-stock-photo-fantasy.jpg);
+    background: url(../../images/banner/1.jpg);
   }
   .slider__slide:nth-child(2) {
-    background: url(https://i.pinimg.com/736x/e8/27/eb/e827eb3d61909aea0c45232183bb9e03.jpg);
+    background: url(../../images/banner/2.jpg);
   }
   .slider__slide:nth-child(3) {
-    background: url(https://click-or-die.ru/wp-content/uploads/2020/06/1-383x680.jpg);
+    background: url(../../images/banner/3.jpg);
   }
   .slider__slide:nth-child(4) {
-    background: url(https://img13.postila.ru/resize?w=600&src=%2Fdata%2F21%2F33%2Fcf%2Fa1%2F2133cfa14b903cd9d0fd64046b2c459bae1458d0bfd4b10c0b18a5941eb25779.jpg);
+    background: url(../../images/banner/4.jpg);
   }
 
   .BannerOpt {

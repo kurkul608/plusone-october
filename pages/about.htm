@@ -1,9 +1,10 @@
 title = "О проекте"
 url = "/about"
 layout = "default"
+is_hidden = 0
 
+[contenteditor]
 ==
-
 {% put styles %}
 <link rel="stylesheet" href="{{ 'assets/css/all.css'|theme }}">
 <link rel="stylesheet" href="{{ 'assets/css/components/ComponentBaner.css'|theme }}">
@@ -42,22 +43,14 @@ layout = "default"
 
 
 <section>
-    <h2 class="tittleTextS">Общая информация о проекте</h2>
-    <p class="descriptionTextS">Если идти в медучреждение вы по тем или иным причинам не можете, то домашние тесты в
-        помощь. Конечно, через несколько дней после зачатия такой тест ничего не покажет. Все тесты на определение
-        ХГЧ в моче нужно делать не раньше, чем за неделю до начала месячных. Самые дешевые тест-полоски покажут
-        действительный результат только с первого дня задержки. Тесты подороже – струйный или планшетный, могут
-        определить беременность как раз за неделю до критических дней. Вообще, чтобы не гадать на кофейной гуще –
-        рано ли делать тест, или уже пора – нужно знать некоторые значения. Такие домашние тесты имеют
-        чувствительность от 10 до 25 Mme/ml. Так вот чем меньше цифра, тем чувствительнее тест. Например, тест
-        «десяточка» может показать беременность уже в четыре недели. Какая у вас может быть неделя – посчитать
-        легко, нужно вспомнить первый день своих последних месячных – это и будет точка отсчета.</p>
+    {% component 'contenteditor' file="about/title.htm" fixture="h2" tools="" class="tittleTextS" %}
+    {% component 'contenteditor' file="about/target.htm" fixture="p" tools="" class="descriptionTextS" %}
 </section>
 
 
 
 <section id="form">
-    <h2 class="tittleTextS">Стань волонтером проекта</h2>
+    {% component 'contenteditor' file="about/become.htm" fixture="h2" tools="" class="tittleTextS" %}
     <div class="flexForm">
         <div class="leftForm">
             <div class="roundS"></div>
@@ -131,22 +124,21 @@ layout = "default"
 
 
 <section id="contactsS">
-    <h2 class="tittleTextS">Контакты</h2>
-
-
+    {% component 'contenteditor' file="about/contacts/title.htm" fixture="h2" tools="" class="tittleTextS" %}
     <div class="flexBoxS">
 
 
         <div class="s_1">
             <p class="helpersTextS s_01">Номера телефонов
                 для всех регинонов РФ:</p>
-            <a class="s_03 tittleTextS" href="tel:88001234567">8 (800) 123-45-67</a>
-            <a class="s_03 tittleTextS" href="tel:88001234567">8 (800) 123-45-67</a>
-            <a class="s_03 tittleTextS" href="tel:88001234567">8 (800) 123-45-67</a>
+
+            <a class="s_03 tittleTextS" href="tel:88001234567">{% component 'contenteditor' file="about/contacts/first.htm" fixture="" tools="" class="" %}</a>
+            <a class="s_03 tittleTextS" href="tel:88001234567">{% component 'contenteditor' file="about/contacts/second.htm" fixture="" tools="" class="" %}</a>
+            <a class="s_03 tittleTextS" href="tel:88001234567">{% component 'contenteditor' file="about/contacts/third.htm" fixture="" tools="" class="" %}</a>
         </div>
         <div class="s_1">
-            <p class="helpersTextS s_02">What’s App <br /> для тех, кто не может позвонить</p>
-            <a class="s_03 tittleTextS" href="tel:88001234567">8 (800) 123-45-67</a>
+            {% component 'contenteditor' file="about/contacts/messenger.htm" fixture="p" tools="" class="helpersTextS s_02" %}
+            <a class="s_03 tittleTextS" href="tel:88001234567">{% component 'contenteditor' file="about/contacts/forth.htm" fixture="" tools="" class="" %}</a>
         </div>
     </div>
 

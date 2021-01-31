@@ -1,9 +1,10 @@
 title = "Главная страница"
 url = "/"
-layout = "default"
+layout = "main"
+is_hidden = 0
 
+[contenteditor]
 ==
-
 {% put styles %}
 <link href="{{ 'assets/css/pages/index.css'|theme }}" rel="stylesheet">
 
@@ -17,7 +18,7 @@ layout = "default"
                 <div class="homePage__content__header__left"></div>
                 <div class="homePage__content__header__right">
                     <div class="homePage__content__header__right__text _anim-items">
-                        <p>Информационный портал Плюс один</p>
+                        {% component 'contenteditor' file="intro/title.htm" %}
                     </div>
                 </div>
             </div>
@@ -150,46 +151,46 @@ layout = "default"
 
 </section>
 
-<section class="last__section" id="stopScroll">
-    <section class="actual__second" >
-        <div class="container__new">
-            <div class="advice">— Советы молодым мамам</div>
+<!--<section class="last__section" id="stopScroll">-->
+<!--    <section class="actual__second" >-->
+<!--        <div class="container__new">-->
+<!--            <div class="advice">— Советы молодым мамам</div>-->
 
-            {% partial 'story' %}
-        </div>
-        <!--      </div>-->
-    </section>
-    <section id="sec_3">
-        <h2 class="tittleTextS">Поддержка <br/>на федеральном уровне</h2>
-        <div class="boxImages">
-            <img src="assets/images/map/Image_1.jpg" alt="Поддержка на федеральном уровне" >
-
-
-        </div>
+<!--            {% partial 'story' %}-->
+<!--        </div>-->
+<!--        &lt;!&ndash;      </div>&ndash;&gt;-->
+<!--    </section>-->
+<!--    <section id="sec_3">-->
+<!--        <h2 class="tittleTextS">Поддержка <br/>на федеральном уровне</h2>-->
+<!--        <div class="boxImages">-->
+<!--            <img src="assets/images/map/Image_1.jpg" alt="Поддержка на федеральном уровне" >-->
 
 
+<!--        </div>-->
 
-        <div class="felxForLinks_S">
-            <div class="itemForLinks_S">
-                <p class="textForTowns"><a href="">Магаданская область</a></p>
-                <p class="textForTowns"><a href="">Свердловская область</a></p>
-                <p class="textForTowns"><a href="">Тюменская область</a></p>
-                <p class="textForTowns"><a href="">Алтайский край</a></p>
-            </div>
-            <div class="itemForLinks_S">
-                <p class="textForTowns"><a href="">Нижний Новгород</a></p>
-                <p class="textForTowns"><a href="">Ставропольский край</a></p>
-                <p class="textForTowns"><a href="">Республика Татарстан</a></p>
-            </div>
-            <div class="itemForLinks_S">
-                <p class="textForTowns"><a href="">Пензенская область</a></p>
-                <p class="textForTowns"><a href="">Смоленская область</a></p>
-                <p class="textForTowns"><a href="">Самарская область</a></p>
-            </div>
-        </div>
-    </section>
 
-</section>
+
+<!--        <div class="felxForLinks_S">-->
+<!--            <div class="itemForLinks_S">-->
+<!--                <p class="textForTowns"><a href="">Магаданская область</a></p>-->
+<!--                <p class="textForTowns"><a href="">Свердловская область</a></p>-->
+<!--                <p class="textForTowns"><a href="">Тюменская область</a></p>-->
+<!--                <p class="textForTowns"><a href="">Алтайский край</a></p>-->
+<!--            </div>-->
+<!--            <div class="itemForLinks_S">-->
+<!--                <p class="textForTowns"><a href="">Нижний Новгород</a></p>-->
+<!--                <p class="textForTowns"><a href="">Ставропольский край</a></p>-->
+<!--                <p class="textForTowns"><a href="">Республика Татарстан</a></p>-->
+<!--            </div>-->
+<!--            <div class="itemForLinks_S">-->
+<!--                <p class="textForTowns"><a href="">Пензенская область</a></p>-->
+<!--                <p class="textForTowns"><a href="">Смоленская область</a></p>-->
+<!--                <p class="textForTowns"><a href="">Самарская область</a></p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+
+<!--</section>-->
 
 
 {% put scripts %}
